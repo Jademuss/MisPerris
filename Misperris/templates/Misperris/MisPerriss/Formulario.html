@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheet/style.css">    
+    <title>Formulario Adopcion</title>
+    <link rel="icon" href="img/iconoperro.png">
+    </head>
+    
+    <body>
+        <header id="menu">
+            <div class="contenedor">
+                 <nav>
+                        <ul>
+                            <li><a href="index.html"><img id="logo"  src="img/perrologotipo.jpg" alt="Imagen Perro logo"></a></li>     
+                            <li><a class="op2" tabindex= "1" href="formulario.html">Adopcion</a></li>
+                            <li><a class="op3" tabindex= "2" href="NotFound.html">Ayuda</a></li>
+                            <li><a class="op4" tabindex= "3" href="NotFound.html">Sobre Nosotros</a></li>    
+                            <li><a class="op1" tabindex= "4" href="index.html">Inicio</a></li>
+                        </ul>
+                 </nav>    
+             </div>     
+        </header>
+
+        <main> 
+            <form tabindex= "5">
+                <h3>Formulario para adopción  </h3><br/>
+                <label for="txtEmail" class="correo" tabindex= "6">Ingrese Email : </label><br/>
+                <input id="txtEmail" type="email" maxlength="30" minlength="2" placeholder="e.g. : lala@lala.com" required tabindex= "7"/><br/>
+
+                <label for="txtRut" class="rut" tabindex= "8">Rut : </label><br/>
+                <input id="txtRut" type="text" onkeyup="modifyText()" placeholder="Ingrese Rut"  maxlength="10" required tabindex= "9"/><br/>
+
+                <label for="txtName" class="name" tabindex= "10">Nombre Completo : </label><br/>
+                <input id="txtName" type="text" maxlength="50" minlength="2" placeholder="Ingrese Nombre" required tabindex= "11"/> 
+                <span id="nameValidator" style="color:red"></span><br/>            
+
+                <label for="txtDate" class="fecha" tabindex= "12"> Fecha de nacimiento : </label><br/>    
+                <input id="txtDate" type="date" min ="1850-12-12" max="2001-01-01" required tabindex= "13"/><br/>	
+
+                <label for="txtNumber" class="numero" tabindex= "14">Numero Telefonico : </label><br/>    
+                <input id="txtNumber" type="tel" name="phone" placeholder="E.g. +56912345678" required maxlength="12" tabindex= "15"/>
+                <span id="nameValidato" style="color:gold"></span><br/>
+
+                <label for="txtRegion" class="region" tabindex= "16">Region : </label><br/>    
+                <select id="txtRegion" oninput="selectCity()" tabindex= "17">     
+                </select><br/>   
+
+                <label for="txtCity" class="ciudad" tabindex= "18">Ciudad : </label><br/>    
+                <select id="txtCity"  tabindex= "19">
+                </select><br/>  
+
+                <label for="txtVivienda" class="tipo" tabindex= "20">Tipo de vivienda :  </label><br/>    
+	            <select id="txtVivienda" tabindex= "21">
+                    <option>Casa con patio grande</option>
+	                <option>Casa con patio pequeño</option>
+	                <option>Casa sin patio</option>
+                    <option>Departamento</option>
+                </select><br/>
+                
+                <button id="boton" tabindex= "22">Registrar</button>
+            </form>
+            <script src="js/formulario.js"></script> 
+        </main>   
+    </body>
+</html>
